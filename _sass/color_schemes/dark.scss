@@ -1,0 +1,172 @@
+// VS Code Dark Theme inspired color scheme for Just the Docs
+
+$body-background-color: #1e1e1e;
+$sidebar-color: #252526;
+$border-color: #3e3e42;
+
+$body-text-color: #d4d4d4;
+$body-heading-color: #ffffff;
+$nav-child-link-color: #cccccc;
+$search-result-preview-color: #b0b0b0;
+
+$link-color: #4fc3f7;
+$btn-primary-color: #0e639c;
+$base-button-color: #3e3e42;
+
+$code-background-color: #1e1e1e;
+$code-border-color: #3e3e42;
+
+// Syntax highlighting colors (VS Code inspired)
+$code-linenumber-color: #858585;
+$code-text-color: #d4d4d4;
+$code-keyword-color: #569cd6;
+$code-string-color: #ce9178;
+$code-comment-color: #6a9955;
+$code-function-color: #dcdcaa;
+$code-variable-color: #9cdcfe;
+$code-number-color: #b5cea8;
+$code-class-color: #4ec9b0;
+
+// Search
+$search-background-color: #3e3e42;
+$search-result-preview-color: #b0b0b0;
+
+// Table
+$table-background-color: #252526;
+$table-border-color: #3e3e42;
+
+// Feedback
+$feedback-color: darken($sidebar-color, 3%);
+
+// Navigation
+$nav-list-item-color: #cccccc;
+$nav-list-link-active-color: #ffffff;
+$nav-list-expander-right: false;
+
+// Other
+$panel-background-color: #252526;
+$card-background-color: #252526;
+
+// Override for better contrast
+body {
+  background-color: $body-background-color;
+  color: $body-text-color;
+}
+
+// Code blocks
+pre.highlight {
+  background-color: #1e1e1e;
+  border: 1px solid #3e3e42;
+}
+
+code {
+  background-color: #3e3e42;
+  border: 1px solid #3e3e42;
+  color: #ce9178;
+}
+
+// Search
+.search-input {
+  background-color: #3e3e42;
+  color: #d4d4d4;
+  border: 1px solid #3e3e42;
+  
+  &:focus {
+    border-color: #0e639c;
+  }
+}
+
+// Navigation active state
+.navigation {
+  .nav-list-item {
+    .nav-list-link {
+      &.active {
+        background-color: #37373d;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// Sidebar
+.side-bar {
+  background-color: #252526;
+  border-right: 1px solid #3e3e42;
+}
+
+// Main content area
+.main-content {
+  a {
+    color: #4fc3f7;
+    
+    &:hover {
+      color: #80d8ff;
+    }
+  }
+}
+
+// Tables
+table {
+  background-color: #252526;
+  border: 1px solid #3e3e42;
+  
+  th,
+  td {
+    border: 1px solid #3e3e42;
+  }
+  
+  th {
+    background-color: #2d2d30;
+  }
+  
+  tbody tr:nth-child(odd) {
+    background-color: #1e1e1e;
+  }
+}
+
+// Blockquotes
+blockquote {
+  border-left: 3px solid #3e3e42;
+  color: #b0b0b0;
+}
+
+// Labels and badges
+.label,
+.label-blue {
+  background-color: #0e639c;
+  color: #ffffff;
+}
+
+// Buttons
+.btn-primary {
+  background-color: #0e639c;
+  
+  &:hover {
+    background-color: #1177bb;
+  }
+}
+
+// Callouts
+.note,
+.warning,
+.important,
+.highlight {
+  background-color: #252526;
+  border-left: 3px solid;
+}
+
+.note {
+  border-left-color: #4fc3f7;
+}
+
+.warning {
+  border-left-color: #ff9800;
+}
+
+.important {
+  border-left-color: #f44336;
+}
+
+.highlight {
+  border-left-color: #4caf50;
+}
