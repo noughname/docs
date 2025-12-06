@@ -1,0 +1,109 @@
+# Site settings
+title: Knowledge Base
+description: Personal documentation and knowledge base
+url: https://noughname.github.io
+baseurl: /docs
+
+# Theme settings
+theme: just-the-docs
+remote_theme: just-the-docs/just-the-docs@v0.7.0
+
+# Color scheme - dark mode (VS Code inspired)
+color_scheme: dark
+
+# Search settings
+search_enabled: true
+search:
+  heading_level: 2
+  previews: 3
+  preview_words_before: 5
+  preview_words_after: 10
+  tokenizer_separator: /[\s/]+/
+  rel_url: true
+  button: false
+
+# Navigation settings
+nav_sort: case_insensitive
+nav_enabled: true
+
+# Enable heading anchors
+heading_anchors: true
+
+# Aux links (top right navigation)
+aux_links:
+  "View on GitHub":
+    - "https://github.com/noughname/docs"
+
+# Footer settings
+footer_content: "Personal Knowledge Base | Built with Jekyll and Just the Docs"
+
+# Back to top link
+back_to_top: true
+back_to_top_text: "Back to top"
+
+# GitHub flavored markdown and syntax highlighting
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+# Syntax highlighting theme
+highlighter: rouge
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-github-metadata
+
+# Collections (optional - for organizing different types of docs)
+collections:
+  guides:
+    permalink: "/:collection/:path/"
+    output: true
+  reference:
+    permalink: "/:collection/:path/"
+    output: true
+
+# Default settings
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: "guides"
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: "reference"
+    values:
+      layout: default
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - LICENSE
+  - .gitignore
+
+# Include files
+include:
+  - _pages
